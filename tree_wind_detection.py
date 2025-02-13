@@ -128,7 +128,7 @@ class MotionAnalyzer:
         return total_movement / count if count > 0 else 0.0
 
 def main():
-    cap = cv2.VideoCapture("examples/calm.mp4")
+    cap = cv2.VideoCapture("examples/windy1.mp4")
     
     if not cap.isOpened():
         print("Error: Could not open video.")
