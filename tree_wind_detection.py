@@ -107,7 +107,7 @@ class MotionAnalyzer:
         
         return movement, tree_id
 
-    def is_windy(self, tree_id, threshold=4):
+    def is_windy(self, tree_id, threshold=2):
         if tree_id not in self.movement_histories or len(self.movement_histories[tree_id]) == 0:
             return False
         
@@ -145,7 +145,7 @@ def main():
         pass
     
     cv2.createTrackbar('Upper Region %', 'Parameters', 50, 100, nothing)
-    cv2.createTrackbar('Wind Threshold', 'Parameters', 4, 100, nothing)
+    cv2.createTrackbar('Wind Threshold', 'Parameters', 2, 100, nothing)
     
     while True:
         ret, frame = cap.read()
