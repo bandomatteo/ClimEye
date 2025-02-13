@@ -92,7 +92,7 @@ class MotionAnalyzer:
         
         flow = cv2.absdiff(self.prev_gray[tree_id], roi_frame)
         
-        # Debug
+        # Flows for debuggig
         #cv2.imshow(f'Flow_{tree_id}', flow)
              
         movement = np.mean(flow)
@@ -128,7 +128,7 @@ class MotionAnalyzer:
         return total_movement / count if count > 0 else 0.0
 
 def main():
-    cap = cv2.VideoCapture("examples/video2.mp4")
+    cap = cv2.VideoCapture("examples/calm.mp4")
     
     if not cap.isOpened():
         print("Error: Could not open video.")
