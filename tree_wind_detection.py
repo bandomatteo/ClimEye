@@ -79,19 +79,16 @@ class MotionAnalyzer:
     def calculate_motion(self, gray_frame, roi):
         tree_id = self._get_tree_id(roi)
         x, y, w, h = roi
-        
-        
+    
         if tree_id not in self.movement_histories:
             self.movement_histories[tree_id] = deque(maxlen=5)
             
         roi_frame = cv2.resize(gray_frame[y:y+h, x:x+w], 
                              (self.resize_dim, self.resize_dim))
-        
-        
+         
         if tree_id not in self.prev_gray or self.prev_gray[tree_id].shape != roi_frame.shape:
             self.prev_gray[tree_id] = roi_frame
             return 0.0, tree_id
-        
         
         flow = cv2.absdiff(self.prev_gray[tree_id], roi_frame)
         
@@ -157,10 +154,9 @@ def main():
         wind_threshold = cv2.getTrackbarPos('Wind Threshold', 'Parameters')
         
         tree_detector.set_upper_region_ratio(upper_region_ratio)
-              
+           
         tree_boxes, thresh = tree_detector.detect_trees(frame)
         
-       
         gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         
         result = frame.copy()
@@ -174,17 +170,14 @@ def main():
                          (box[0]+box[2], box[1]+box[3]), 
                          color, 2)
             
-            
             text = f"Tree #{tree_id.split('_')[1]}"
             cv2.putText(result, text, (box[0], box[1]-10), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
-
-        
+   
         avg_movement = motion_analyzer.get_average_movement()
         condition = "WINDY" if avg_movement > wind_threshold else "CALM"
         condition_color = (0, 0, 255) if condition == "WINDY" else (0, 255, 0)
 
-       
         cv2.putText(result, f"Condition: {condition}", 
                     (10, result.shape[0] - 20),  # Bottom left
                     cv2.FONT_HERSHEY_SIMPLEX, 
