@@ -73,8 +73,8 @@ class MotionAnalyzer:
         
         return closest_id
     
-    def set_resize_dim(self, dim):     
-        self.resize_dim = max(10, min(dim, 200))
+    #def set_resize_dim(self, dim):     
+        #self.resize_dim = max(10, min(dim, 200))
 
     def calculate_motion(self, gray_frame, roi):
         tree_id = self._get_tree_id(roi)
