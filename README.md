@@ -39,7 +39,7 @@ The MotionAnalyzer class tracks and analyzes tree movement:
 - Determines overall wind conditions based on average movement
 - Tracks trees across frames using position-based matching
 
-![Motion Analysis Example](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGMzbzY5NTV5eGh3NzJjcGlzajU0YXp5bmZ2Nm0zaXNhYzlrNWtjdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MXRWsfNnQJilkQxddQ/giphy.gif)
+![Motion Analysis Example](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWh4bTEweHZxdG9pNHRwbnRzaGxuNWYzZXBlYTYzZnJ6eDEweWx0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Wo0O5dCzSayKtPJ5Zq/giphy.gif)
 
 ## Installation
 
