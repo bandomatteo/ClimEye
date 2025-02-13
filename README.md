@@ -1,8 +1,9 @@
 # ClimEye
+![logo](https://i.ibb.co/B5xs3ygP/Risorsa-14x.png)
 
 A computer vision system that detects trees in video footage and analyzes their movement to determine wind conditions. The system uses OpenCV to identify trees and track their motion, providing real-time feedback about whether conditions are windy or calm.
 
-![Tree Detection Demo](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWxnbXFoM2pidm5xaDJxaTJxY2xobHBya2JpZWcxODZlMnozdmphMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aV7jpB9FYE9saAnoyX/giphy.gif)
+![Tree Detection Demo](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2h6NnZ0c2dhbW9oMnMwNGxid2NqamprcXB1bjN2NHVqNmludG5maCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BXXUjDn1CCLqoxrNSm/giphy.gif)
 
 ## Features
 
@@ -38,7 +39,7 @@ The MotionAnalyzer class tracks and analyzes tree movement:
 - Determines overall wind conditions based on average movement
 - Tracks trees across frames using position-based matching
 
-![Motion Analysis Example](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnlreHgwNDNpbTM3OGo1bnNodDdzaHo3cnlycTYxd3k4b2hwdWF6cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NiQqtXdjwCrOFNO5Zl/giphy.gif)
+![Motion Analysis Example](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGMzbzY5NTV5eGh3NzJjcGlzajU0YXp5bmZ2Nm0zaXNhYzlrNWtjdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MXRWsfNnQJilkQxddQ/giphy.gif)
 
 ## Installation
 
@@ -96,4 +97,10 @@ The system displays three windows:
 - Optimal performance requires good lighting conditions
 - Trees should be clearly visible against the background
 - Performance may vary based on video quality and resolution
+
+## Video Sources
+- [calm.mp4](https://www.youtube.com/)
+- [windy1.mp4](https://stock.adobe.com/it/video)
+- [windy1.mp4](https://stock.adobe.com/it/video)
+- [windy3.mp4](https://www.storyblocks.com/)
 
