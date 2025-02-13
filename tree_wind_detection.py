@@ -107,7 +107,7 @@ class MotionAnalyzer:
         
         return movement, tree_id
 
-    def is_windy(self, tree_id, threshold=45):
+    def is_windy(self, tree_id, threshold=4):
         if tree_id not in self.movement_histories or len(self.movement_histories[tree_id]) == 0:
             return False
         
@@ -131,7 +131,7 @@ class MotionAnalyzer:
         return total_movement / count if count > 0 else 0.0
 
 def main():
-    cap = cv2.VideoCapture("examples/video3.mp4")
+    cap = cv2.VideoCapture("examples/video2.mp4")
     
     if not cap.isOpened():
         print("Error: Could not open video.")
@@ -145,7 +145,7 @@ def main():
         pass
     
     cv2.createTrackbar('Upper Region %', 'Parameters', 50, 100, nothing)
-    cv2.createTrackbar('Wind Threshold', 'Parameters', 45, 100, nothing)
+    cv2.createTrackbar('Wind Threshold', 'Parameters', 4, 100, nothing)
     
     while True:
         ret, frame = cap.read()
